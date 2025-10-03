@@ -1,0 +1,21 @@
+
+:root{--bg:#fff;--fg:#0f172a;--muted:#475569;--accent:#2563eb;--card:#f8fafc;--border:#e2e8f0;--shadow:0 10px 25px rgba(0,0,0,.08)}
+:root[data-theme=dark]{--bg:#0b1220;--fg:#f8fafc;--muted:#cbd5e1;--accent:#60a5fa;--card:#0f172a;--border:#1e293b;--shadow:0 10px 25px rgba(0,0,0,.4)}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial;background:var(--bg);color:var(--fg);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover,a:focus{text-decoration:underline}
+.container{max-width:1100px;padding:0 1rem;margin:0 auto}
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in oklab, var(--bg) 92%, transparent);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0}
+.nav__brand{font-weight:800;letter-spacing:.4px}
+.nav__links{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem}
+.button,button,.btn{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);background:var(--card);color:var(--fg);padding:.5rem .9rem;border-radius:9999px;cursor:pointer;box-shadow:var(--shadow)}
+.hero{position:relative;padding:clamp(3rem,7vw,6rem) 0;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero__content{position:relative;z-index:1;display:grid;gap:1rem;max-width:900px}
+.hero__kicker{font-size:.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:.22em}
+.hero__title{font-size:clamp(2rem,7vw,3.4rem);line-height:1.1;margin:0}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1rem}
+.card{grid-column:span 6;background:var(--card);border:1px solid var(--border);border-radius:1rem;box-shadow:var(--shadow);overflow:hidden;transition:transform 120ms ease}
+.card:hover{transform:translateY(-3px)}.card img{display:block;width:100%;height:auto}.card__body{padding:1rem}.card__title{margin:0 0 .5rem 0;font-size:1.1rem}
+@media(max-width:800px){.card{grid-column:span 12}}
+.section{padding:clamp(2rem,5vw,3rem) 0}.site-footer{padding:2rem 0 3rem;border-top:1px solid var(--border);font-size:.95rem;color:var(--muted)}
+#bg-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
